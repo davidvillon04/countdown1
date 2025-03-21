@@ -1,4 +1,4 @@
-function fizzbuzz(count) {
+function fizzBuzz(count) {
   for (let x = 1; x < count + 1; x++) {
     if (x % 3 == 0 && x % 4 == 0) {
       console.log("fizzbuzz");
@@ -12,4 +12,4 @@ function fizzbuzz(count) {
   }
 }
 
-fizzbuzz(13);
+fizzBuzz(13);
