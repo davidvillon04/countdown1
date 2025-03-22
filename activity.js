@@ -1,20 +1,41 @@
 /* Beginner Challenge */
 
 const bookList = [
-  { title: "Don Quixote", author: "Miguel de Cervantes" },
-  { title: "Ulysses", author: "James Joyce" },
-  { title: "The Great Gatsby", author: "F. Scott Fitzgerald" },
-  { title: "Moby Dick", author: "Herman Melville" },
+   { title: "Don Quixote", author: "Miguel de Cervantes" },
+   { title: "Ulysses", author: "James Joyce" },
+   { title: "The Great Gatsby", author: "F. Scott Fitzgerald" },
+   { title: "Moby Dick", author: "Herman Melville" },
 ];
 
 /* Do all of these using proper ES6 syntax
 Using the following array of objects,
 */
 // (1) Write an arrow function that adds a new entry to bookList
+const addBook = (book) => bookList.push(book);
+
+addBook({ title: "Title1", author: "Author1" });
+console.log(bookList);
 
 // (2) Write an arrow function that removes a specific book from the bookList
+const removeBook = (title) => {
+   const index = bookList.findIndex((book) => book.title === title);
+   if (index !== -1) {
+      bookList.splice(index, 1);
+   }
+};
+
+removeBook("Don Quixote");
+console.log(bookList);
 
 // (3) Write an arrow function that lists out all the books or all the authors in the book list */
+
+// List all book titles:
+const listBooks = () => bookList.map((book) => book.title);
+console.log(listBooks());
+
+// List all authors:
+const listAuthors = () => bookList.map((book) => book.author);
+console.log(listAuthors());
 
 /*
 /* Intermediate Challenge */
@@ -41,13 +62,13 @@ Using the following array of objects,
   and an averageGrade field representing the letter grade that corresponds to their GPA */
 
 const attendance = [
-  { firstName: "Clay", lastName: "Tondreau", gpa: 4.0 },
-  { firstName: "Tucker", lastName: "Wilson", gpa: 2.0 },
-  { firstName: "Eliza", lastName: "Tobin", gpa: 3.7 },
-  { firstName: "Sofia", lastName: "Ackerman", gpa: 1.1 },
-  { firstName: "Thomas", lastName: "Beddow", gpa: 2.3 },
-  { firstName: "Jackson", lastName: "Wolf", gpa: 4.0 },
-  { firstName: "Jared", lastName: "Nguyen", gpa: 4.0 },
+   { firstName: "Clay", lastName: "Tondreau", gpa: 4.0 },
+   { firstName: "Tucker", lastName: "Wilson", gpa: 2.0 },
+   { firstName: "Eliza", lastName: "Tobin", gpa: 3.7 },
+   { firstName: "Sofia", lastName: "Ackerman", gpa: 1.1 },
+   { firstName: "Thomas", lastName: "Beddow", gpa: 2.3 },
+   { firstName: "Jackson", lastName: "Wolf", gpa: 4.0 },
+   { firstName: "Jared", lastName: "Nguyen", gpa: 4.0 },
 ];
 
 /* Hardest Challenge (Don't do this without completing harder challenges) */
