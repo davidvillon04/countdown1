@@ -97,6 +97,20 @@ console.log(sumUp(4));
 /* (7) Write an arrow function that converts the temperature from Celsius to Fahrenheit and then tells
     me what I should wear accordingly */
 
+const convertTemperature = (celsius) => {
+   const fahrenheit = (celsius * 9) / 5 + 32;
+   if (fahrenheit < 32) {
+      return "Wear a coat";
+   } else if (fahrenheit >= 32 && fahrenheit < 60) {
+      return "Wear a sweater";
+   } else {
+      return "Wear a t-shirt";
+   }
+};
+console.log(convertTemperature(30)); // 86°F, Wear a t-shirt
+console.log(convertTemperature(0)); // 32°F, Wear a sweater
+console.log(convertTemperature(-10)); // 14°F, Wear a coat
+
 /* (8) Write a function that takes in an array and prints out the amount of truthy values in that array
   using .forEach() */
 
