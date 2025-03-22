@@ -43,12 +43,54 @@ console.log(listAuthors());
 /* (4) Write a one-line arrow function that takes in a number and returns a string stating whether the
   number is positive or negative using a ternary operator (assume the number will never be zero) */
 
+const checkNumber = (num) => (num > 0 ? "Positive" : "Negative");
+
+console.log(checkNumber(5));
+console.log(checkNumber(-3));
+
 /* (5) Write a switch statement for a 'day' variable that prints out something based off of what day of
   the week it is i.e. if it's Monday, print "good luck" or wednesday print "hump day" or friday print "party" */
+
+const day = "Wednesday";
+
+switch (day) {
+   case "Monday":
+      console.log("good luck");
+      break;
+   case "Tuesday":
+      console.log("doing good");
+      break;
+   case "Wednesday":
+      console.log("hump day");
+      break;
+   case "Thursday":
+      console.log("almost there");
+      break;
+   case "Friday":
+      console.log("party");
+      break;
+   case "Saturday":
+      console.log("have fun");
+      break;
+   case "Sunday":
+      console.log("enjoy your weekend");
+      break;
+   default:
+      console.log("Not a valid day");
+}
 
 /* (6) Write an arrow function that takes in a number, and uses a for loop to return the sum of every
   number from 1 up to that number
   ex. sumUp(7) = 28 */
+
+const sumUp = (num) => {
+   let sum = 0;
+   for (let i = 1; i <= num; i++) {
+      sum += i;
+   }
+   return sum;
+};
+console.log(sumUp(4));
 
 /* Harder Challenge */
 
